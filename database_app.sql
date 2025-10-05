@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
-\restrict 3ChBPInDlRP0y9MAA0Y9gpF0Ouc2Tb74L1KHixMDaEUQUqcAgNLBCT5R9bOhEIe
+\restrict ulormDxxWqaddtSazg54OC5UnX38VkGuuwIIW5GbgmPyeVochseYM1XKCk3Jo11
 
 -- Dumped from database version 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1)
 -- Dumped by pg_dump version 16.10 (Ubuntu 16.10-0ubuntu0.24.04.1)
@@ -147,6 +147,21 @@ DROP TABLE IF EXISTS public.banned_emails;
 DROP TABLE IF EXISTS public.auth_session_store;
 DROP TABLE IF EXISTS public.admin_recent_activity;
 DROP EXTENSION IF EXISTS pgcrypto;
+-- *not* dropping schema, since initdb creates it
+--
+-- Name: public; Type: SCHEMA; Schema: -; Owner: -
+--
+
+-- *not* creating schema, since initdb creates it
+
+
+--
+-- Name: SCHEMA public; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON SCHEMA public IS '';
+
+
 --
 -- Name: pgcrypto; Type: EXTENSION; Schema: -; Owner: -
 --
@@ -774,7 +789,6 @@ fb4436f7-ba58-4e68-803d-de55a382baf6	signup	{"email":"demo@demo.com","firstName"
 
 COPY public.auth_session_store (sid, sess, expire) FROM stdin;
 _6Y0f4vX20t3l5SgDZCAd92Q0_QXoi4f	{"cookie":{"originalMaxAge":172800000,"expires":"2025-08-22T18:27:42.429Z","secure":false,"httpOnly":true,"path":"/","sameSite":"strict"},"user":{"id":"24d6fc84-8ec2-4c05-88bb-99c0d8deb7a3","username":"admin","email":"admin@admin.com","password":"$2b$10$mZ5t3sH8fpSfNJD20437memuZEAGdwE09VrZ7Td1Lre6bJYNGiEHm","firstName":"Admin","lastName":"User","company":"Platform Administration","bio":"System administrator","avatar":null,"status":"active","role":"admin","emailVerified":true,"referredBy":null,"registrationIp":"192.168.1.100","lastLoginIp":"10.82.2.31","lastLoginAt":"2025-08-20T17:42:21.920Z","createdAt":"2025-08-04T19:44:33.358Z","updatedAt":"2025-08-20T17:42:21.920Z"}}	2025-08-22 18:42:12
-ddgh3RLy-Gde3eeJ0jyesfFF88FkLFet	{"cookie":{"originalMaxAge":172800000,"expires":"2025-10-07T07:34:05.168Z","secure":true,"httpOnly":true,"domain":".alexdu1996sec485space.space","path":"/","sameSite":"lax"},"user":{"id":"24d6fc84-8ec2-4c05-88bb-99c0d8deb7a3","username":"admin","email":"admin@admin.com","password":"$2a$12$uC65ItLz/EKrcdsDJcBr7ehP5FhFzz.T7RIBg6ky2u/L0LLJ5L27W","firstName":"Admin","lastName":"User","company":"Platform Administration","bio":"System administrator","avatar":null,"status":"active","role":"admin","emailVerified":true,"referredBy":null,"registrationIp":"192.168.1.100","lastLoginIp":"10.82.6.111","lastLoginAt":"2025-08-20T18:27:42.365Z","createdAt":"2025-08-04T19:44:33.358Z","updatedAt":"2025-08-20T18:27:42.365Z"}}	2025-10-07 07:52:29
 \.
 
 
@@ -1010,7 +1024,8 @@ COPY public.smtp_system (id, enabled, smtp_host, smtp_port, from_email, from_nam
 --
 
 COPY public.social_links (id, name, url, is_active, created_at) FROM stdin;
-fa0b591c-2dd1-4db9-9f17-1454481c8a94	https://www.facebook.com/	https://duteczone.net/	t	2025-08-05 17:43:02.711
+fa0b591c-2dd1-4db9-9f17-1454481c8a94	https://www.facebook.com/	https://www.facebook.com/	t	2025-08-05 17:43:02.711
+58d30261-108f-49dd-a20f-540f71201363	linkedin	https://www.linkedin.com/	t	2025-10-05 08:53:55.071
 \.
 
 
@@ -1847,5 +1862,5 @@ ALTER TABLE ONLY public.wallets
 -- PostgreSQL database dump complete
 --
 
-\unrestrict 3ChBPInDlRP0y9MAA0Y9gpF0Ouc2Tb74L1KHixMDaEUQUqcAgNLBCT5R9bOhEIe
+\unrestrict ulormDxxWqaddtSazg54OC5UnX38VkGuuwIIW5GbgmPyeVochseYM1XKCk3Jo11
 
