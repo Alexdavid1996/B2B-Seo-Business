@@ -7,6 +7,7 @@
 # ON Your VPS SSH.
 
 Section 1 — Create sudo user, base packages, firewall
+
 # run as root
 adduser userexample
 usermod -aG sudo userexample
@@ -42,11 +43,11 @@ sudo npm i -g pm2
 
 Section 3 — DNS + HTTPS (Let’s Encrypt)
 
-Make sure your DNS A records point to your server:
+# Make sure your DNS A records point to your server:
 
-@ → YOUR_SERVER_IP
+# @ → YOUR_SERVER_IP
 
-www → YOUR_SERVER_IP
+# www → YOUR_SERVER_IP
 
 # stop nginx for standalone challenge
 sudo systemctl stop nginx
@@ -382,6 +383,7 @@ pm2 startup systemd -u userexample --hp /home/userexample
 
 # --- FINAL STEP: allow nginx to read your built assets ---
 # Set these to YOUR actual values
+
 APP_PATH="/home/userexample/apps/b2b-business"
 DOMAIN="YOURDOMAINHERE"     # e.g. example.com (no https://)
 
