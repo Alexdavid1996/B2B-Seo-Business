@@ -1,0 +1,25 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
+  
+  <!-- Logo circle -->
+  <circle cx="300" cy="315" r="80" fill="white" fill-opacity="0.15"/>
+  <text x="300" y="340" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="64">CP</text>
+  
+  <!-- Main title -->
+  <text x="500" y="280" fill="white" font-family="Arial, sans-serif" font-weight="bold" font-size="56">CollabPro</text>
+  
+  <!-- Subtitle -->
+  <text x="500" y="340" fill="white" font-family="Arial, sans-serif" font-weight="normal" font-size="32" fill-opacity="0.9">Link Exchange &amp; Guest Post Marketplace</text>
+  
+  <!-- Description -->
+  <text x="500" y="400" fill="white" font-family="Arial, sans-serif" font-weight="normal" font-size="24" fill-opacity="0.8">Connect with verified site owners for authentic collaborations</text>
+</svg>
